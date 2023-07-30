@@ -1,0 +1,27 @@
+{% if user %}
+{% if quantity > 0 %}
+
+    <div class="col-3">
+     <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-primary">Indirizzo di spedizione</span>
+     </h4>
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                    <h6 class="my-0">
+                        {{ regione[0]['name'] ~ ", " ~ provincia[0]['name'] }}
+                        <br>
+                        {{ citta[0]['name'] ~ ", " ~ indirizzi[0]['code'] }}
+                        <br>
+                            {{ indirizzi[0]['address'] }}
+                        <br>  
+                    </h6>
+                </div>
+             
+            </li>
+        
+        </ul>
+    </div>
+
+    {% endif %}
+{% endif %}
